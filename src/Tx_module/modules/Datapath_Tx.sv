@@ -1,6 +1,7 @@
 // `include "MUX_n_bit.sv"
 module Datapath_Tx #(
-    parameter n = 8
+    parameter n = 8,
+    logic parity_type_even_odd = 1'b1  // 1 even / 0 odd
 ) (
     input clk,
     input resetn,
@@ -17,6 +18,8 @@ module Datapath_Tx #(
   localparam m = $clog2(n);
   logic [n-1:0] reg_out;
   logic [$clog2(n)-1:0] count_out;
+  logic parity_bit;
+  assign parity_bit = (~parity_type_even_odd) ^ (^reg_out);
 
   Reg_n_bit #(
       .n(n)
@@ -59,7 +62,7 @@ module Datapath_Tx #(
   assign mux2_i[0] = 1'b0;
   assign mux2_i[1] = 1'b1;
   assign mux2_i[2] = mux1_out;
-  assign mux2_i[3] = 1'b0;
+  assign mux2_i[3] = parity_bit;
   assign mux2_out = mux2_i[mux2_s];
 
 

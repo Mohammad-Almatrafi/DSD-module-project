@@ -8,15 +8,19 @@ module FSM_Tx (
     buffer_rst_n,
     counter_rst_n,
     counter_en,
-    mux_s
+    mux_s,
+    parity_check,
+    valid
 
 );
 
   input clk, rst_n, start_sig, count_eq_size;
-  output logic buffer_en, buffer_rst_n, counter_en, counter_rst_n;
+  input parity_check;
+  output logic buffer_en, buffer_rst_n, counter_en, counter_rst_n, valid;
   output logic [1:0] mux_s;
-  localparam init = 2'b00, start = 2'b01, send_0 = 2'b10, send_msg = 2'b11;
-  logic [1:0] n_state, p_state;
+  localparam init = 3'b00, start = 3'b01, send_0 = 3'b10, send_msg = 3'b11, send_parity = 3'b100;
+  logic [2:0] n_state, p_state;
+  assign valid = buffer_en;
 
   always @(posedge clk, negedge rst_n) begin  // state transition always block
 
@@ -62,7 +66,14 @@ module FSM_Tx (
         counter_en = 1'b1;
         counter_rst_n = 1'b1;
       end
-
+      send_parity: begin // functionality => mux should pass the parity logic output, buffer should be disabled till the transmission ends
+        // counter should start counting 
+        mux_s = 2'b11;
+        buffer_en = 1'b0;
+        buffer_rst_n = 1'b1;
+        counter_en = 1'b0;
+        counter_rst_n = 1'b0;
+      end
     endcase
 
   end
@@ -85,7 +96,10 @@ module FSM_Tx (
       end
 
       send_msg: begin
-        n_state = count_eq_size ? start : send_msg;
+        n_state = count_eq_size ? (parity_check ? send_parity : start) : send_msg;
+      end
+      send_parity: begin
+        n_state = start;
       end
 
     endcase
@@ -93,5 +107,3 @@ module FSM_Tx (
   end
 
 endmodule
-
-
