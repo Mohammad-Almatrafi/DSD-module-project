@@ -1,6 +1,6 @@
 module Dataflow_Tx #(
-    parameter n = 8,
-    logic parity_type_even_odd = 1'b1  // 1 even / 0 odd
+    parameter n = 8
+    // 1 even / 0 odd
 ) (
     clk,
     rst_n,
@@ -8,16 +8,16 @@ module Dataflow_Tx #(
     D,
     Tx,
     parity_check,
+    parity_type_even_odd,
     valid
 );
-
+  input logic parity_type_even_odd;
   input logic clk, rst_n, start_sig, parity_check;
   input logic [n-1:0] D;
   output Tx, valid;
 
   Datapath_Tx #(
-      .n(n),
-      .parity_type_even_odd(parity_type_even_odd)
+      .n(n)
   ) Datapath (
       .clk(clk),
       .resetn(rst_n),
@@ -28,6 +28,7 @@ module Dataflow_Tx #(
       .count_en(counter_en),
       .mux2_sl(mux_s),
       .Tx_out(Tx),
+      .parity_type_even_odd(parity_type_even_odd),
       .count_eq_size(count_eq_size)
   );
 

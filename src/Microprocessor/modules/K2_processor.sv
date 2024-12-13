@@ -4,6 +4,7 @@ module K2_processor #(
 ) (
     clk,
     rst_n,
+    PC_en,
     instruction_data,
     ProgramAddress,
     Ro,
@@ -15,7 +16,7 @@ module K2_processor #(
   // R_W(DataMemEn),
   //       .select(imm),
 
-  input clk, rst_n;
+  input clk, rst_n, PC_en;
   input logic [7:0] instruction_data;
   output logic [Bits-1:0] Ro;
   output logic [Bits-1:0] Ra;
@@ -116,7 +117,7 @@ module K2_processor #(
   ) PCounter (
       .clk(clk),
       .rst_n(rst_n),
-      .en(1'b1),
+      .en(PC_en),
       .load(JCF),
       .d(load_counter),
       .q(ProgramAddress)

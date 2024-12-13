@@ -29,7 +29,8 @@ module K2_processor_withMem #(
       .DataMemEn(DataMemEn),
       .imm(imm),
       .MemData(MemData),
-      .Ra(Ra)
+      .Ra(Ra),
+      .PC_en(1'b1)
   );
 
 

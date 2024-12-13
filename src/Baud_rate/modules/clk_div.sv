@@ -14,7 +14,7 @@ module clk_div (
       clk   <= 0;
       count <= 12'b0;
     end else begin
-      if (count == count_lim - 1) begin
+      if (count == (count_lim - 1)) begin
         count <= 12'b0;
         clk   <= ~clk;
       end else begin

@@ -1,9 +1,9 @@
 // `include "MUX_n_bit.sv"
 module Datapath_Tx #(
-    parameter n = 8,
-    logic parity_type_even_odd = 1'b1  // 1 even / 0 odd
+    parameter n = 8
 ) (
     input clk,
+    input parity_type_even_odd,  // 1 even / 0 odd
     input resetn,
     input [n-1:0] D,
     input reg_en,
@@ -36,6 +36,7 @@ module Datapath_Tx #(
   ) counter_tx (
       .clk(clk),
       .resetn(resetn & reset_count),
+      .clear(1'b0),
       .count_en(count_en),
       .Q(count_out)
   );

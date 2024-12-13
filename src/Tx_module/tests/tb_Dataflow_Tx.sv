@@ -6,8 +6,7 @@ module tb_Dataflow_Tx;
   logic parity_check, valid;
 
   Dataflow_Tx #(
-      .n(n),
-      .parity_type_even_odd(1'b0)
+      .n(n)
   ) DUT (
       .clk(clk),
       .rst_n(rst_n),
@@ -15,6 +14,7 @@ module tb_Dataflow_Tx;
       .D(D),
       .Tx(Tx),
       .parity_check(parity_check),
+      .parity_type_even_odd(1'b0),
       .valid(valid)
   );
 
