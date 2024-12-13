@@ -44,8 +44,6 @@ module Dataflow_Rx #(
       .choose_equality(choose_equality),
       .correct(correct),
       .out_buffer(out_buffer)
-
-
   );
 
   FSM_Rx fsm (

@@ -1,0 +1,89 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+| Date         : Fri Dec 13 16:29:46 2024
+| Host         : rur1k-TP410UAR running 64-bit Ubuntu 24.04.1 LTS
+| Command      : report_control_sets -verbose -file imp_UART_loop_control_sets_placed.rpt
+| Design       : imp_UART_loop
+| Device       : xc7a100t
+------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    11 |
+|    Minimum number of control sets                        |    11 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    41 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    11 |
+| >= 0 to < 4        |     4 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     3 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     2 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              16 |            6 |
+| No           | No                    | Yes                    |              33 |           11 |
+| No           | Yes                   | No                     |              20 |            5 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              26 |            9 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------------------------+-----------------------------------------------------------+---------------------------------------------+------------------+----------------+
+|                  Clock Signal                 |                       Enable Signal                       |               Set/Reset Signal              | Slice Load Count | Bel Load Count |
++-----------------------------------------------+-----------------------------------------------------------+---------------------------------------------+------------------+----------------+
+|  Rx_clk                                       |                                                           | UART_mod/Rx_mod/fsm/parity_FF_rst_n_reg_0   |                1 |              1 |
+|  UART_mod/clks/tx_clk/Tx_clk                  |                                                           | UART_mod/clks/rx_clk/CPU_RESETN             |                2 |              3 |
+|  UART_mod/clks/tx_clk/Tx_clk                  | UART_mod/Tx_module/fsm/FSM_sequential_p_state_reg[2]_0[0] | UART_mod/Tx_module/fsm/CPU_RESETN[0]        |                1 |              3 |
+|  Rx_clk                                       | UART_mod/Rx_mod/datapath/delay_counter/E[0]               | UART_mod/Rx_mod/fsm/AR[0]                   |                1 |              3 |
+|  Rx_clk                                       | UART_mod/Tx_module/Datapath/reg_tx/Q_reg[3]_0[0]          | UART_mod/Tx_module/Datapath/reg_tx/AR[0]    |                2 |              4 |
+|  UART_mod/Tx_module/fsm/buffer_en_reg_i_2_n_0 |                                                           |                                             |                3 |              7 |
+|  UART_mod/clks/tx_clk/Tx_clk                  | UART_mod/Tx_module/fsm/E[0]                               | UART_mod/clks/rx_clk/CPU_RESETN             |                2 |              8 |
+|  Rx_clk                                       | UART_mod/Rx_mod/datapath/delay_counter/E[0]               | UART_mod/Rx_mod/fsm/count_delay_en_reg_0[0] |                3 |              8 |
+|  UART_mod/Rx_mod/fsm/n_state_reg[2]_i_2_n_0   |                                                           |                                             |                3 |              9 |
+|  Rx_clk                                       |                                                           | UART_mod/clks/rx_clk/CPU_RESETN             |                4 |             16 |
+|  CLK100MHZ_IBUF_BUFG                          |                                                           | UART_mod/clks/rx_clk/CPU_RESETN             |                9 |             33 |
++-----------------------------------------------+-----------------------------------------------------------+---------------------------------------------+------------------+----------------+
+
+

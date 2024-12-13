@@ -35,7 +35,7 @@ module FSM_Tx (
       init: begin  // functionality => mux should pass 1, buffer and counter should be reseted
         mux_s = 2'd1;
         buffer_en = 1'b0;
-        buffer_rst_n = 1'b0;
+        buffer_rst_n = 1'b1;
         counter_en = 1'b0;
         counter_rst_n = 1'b0;
       end
