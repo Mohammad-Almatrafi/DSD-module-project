@@ -1,74 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1734096514">
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="PA-TCL" Name="imp_UART_loop.tcl"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="imp_UART_loop_bus_skew_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="imp_UART_loop_reports.tcl"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="imp_UART_loop_bus_skew_routed.rpx"/>
+  <File Type="OPT-DCP" Name="imp_UART_loop_opt.dcp"/>
+  <File Type="OPT-DRC" Name="imp_UART_loop_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="imp_UART_loop.hwdef"/>
+  <File Type="PWROPT-DCP" Name="imp_UART_loop_pwropt.dcp"/>
+  <File Type="PLACE-DCP" Name="imp_UART_loop_placed.dcp"/>
+  <File Type="PLACE-IO" Name="imp_UART_loop_io_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="imp_UART_loop_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="imp_UART_loop_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="imp_UART_loop_control_sets_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="imp_UART_loop_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="imp_UART_loop_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="imp_UART_loop_physopt.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="imp_UART_loop_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="imp_UART_loop_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="imp_UART_loop_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="imp_UART_loop_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="imp_UART_loop_drc_routed.pb"/>
+  <File Type="BG-BIT" Name="imp_UART_loop.bit"/>
+  <File Type="ROUTE-STATUS-PB" Name="imp_UART_loop_route_status.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="imp_UART_loop_methodology_drc_routed.rpt"/>
+  <File Type="BG-BIN" Name="imp_UART_loop.bin"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="imp_UART_loop_timing_summary_routed.rpt"/>
+  <File Type="BITSTR-MSK" Name="imp_UART_loop.msk"/>
+  <File Type="ROUTE-TIMING-PB" Name="imp_UART_loop_timing_summary_routed.pb"/>
+  <File Type="BITSTR-RBT" Name="imp_UART_loop.rbt"/>
+  <File Type="ROUTE-TIMING-RPX" Name="imp_UART_loop_timing_summary_routed.rpx"/>
+  <File Type="BITSTR-NKY" Name="imp_UART_loop.nky"/>
+  <File Type="BITSTR-BMM" Name="imp_UART_loop_bd.bmm"/>
+  <File Type="ROUTE-CLK" Name="imp_UART_loop_clock_utilization_routed.rpt"/>
   <File Type="BG-DRC" Name="imp_UART_loop.drc"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="imp_UART_loop_methodology_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="imp_UART_loop.mmi"/>
+  <File Type="ROUTE-BUS-SKEW" Name="imp_UART_loop_bus_skew_routed.rpt"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="BG-BGN" Name="imp_UART_loop.bgn"/>
   <File Type="BITSTR-SYSDEF" Name="imp_UART_loop.sysdef"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="imp_UART_loop.ltx"/>
-  <File Type="BITSTR-MMI" Name="imp_UART_loop.mmi"/>
-  <File Type="BITSTR-BMM" Name="imp_UART_loop_bd.bmm"/>
-  <File Type="BITSTR-NKY" Name="imp_UART_loop.nky"/>
-  <File Type="BITSTR-RBT" Name="imp_UART_loop.rbt"/>
-  <File Type="BITSTR-MSK" Name="imp_UART_loop.msk"/>
-  <File Type="BG-BIN" Name="imp_UART_loop.bin"/>
-  <File Type="BG-BIT" Name="imp_UART_loop.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="imp_UART_loop_bus_skew_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="imp_UART_loop_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="imp_UART_loop_bus_skew_postroute_physopted.rpt"/>
   <File Type="RDI-RDI" Name="imp_UART_loop.vdi"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="imp_UART_loop_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="imp_UART_loop_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="imp_UART_loop_timing_summary_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="imp_UART_loop_postroute_physopt_bb.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="imp_UART_loop_postroute_physopt.dcp"/>
-  <File Type="ROUTE-BUS-SKEW" Name="imp_UART_loop_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="imp_UART_loop_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-SIMILARITY" Name="imp_UART_loop_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-TIMING-RPX" Name="imp_UART_loop_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-TIMING-PB" Name="imp_UART_loop_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="imp_UART_loop_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="imp_UART_loop_route_status.pb"/>
   <File Type="ROUTE-STATUS" Name="imp_UART_loop_route_status.rpt"/>
   <File Type="ROUTE-PWR-RPX" Name="imp_UART_loop_power_routed.rpx"/>
   <File Type="ROUTE-PWR-SUM" Name="imp_UART_loop_power_summary_routed.pb"/>
   <File Type="ROUTE-PWR" Name="imp_UART_loop_power_routed.rpt"/>
   <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="imp_UART_loop_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="imp_UART_loop_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="imp_UART_loop_methodology_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-RPX" Name="imp_UART_loop_drc_routed.rpx"/>
-  <File Type="ROUTE-DRC-PB" Name="imp_UART_loop_drc_routed.pb"/>
-  <File Type="ROUTE-DRC" Name="imp_UART_loop_drc_routed.rpt"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="imp_UART_loop_routed_bb.dcp"/>
-  <File Type="ROUTE-DCP" Name="imp_UART_loop_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="imp_UART_loop_routed_error.dcp"/>
-  <File Type="PHYSOPT-TIMING" Name="imp_UART_loop_timing_summary_physopted.rpt"/>
-  <File Type="PHYSOPT-DRC" Name="imp_UART_loop_drc_physopted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="imp_UART_loop_physopt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="imp_UART_loop_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="imp_UART_loop_postplace_pwropt.dcp"/>
-  <File Type="PLACE-TIMING" Name="imp_UART_loop_timing_summary_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="imp_UART_loop_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="imp_UART_loop_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-CTRL" Name="imp_UART_loop_control_sets_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="imp_UART_loop_utilization_placed.pb"/>
-  <File Type="PLACE-UTIL" Name="imp_UART_loop_utilization_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="imp_UART_loop_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-IO" Name="imp_UART_loop_io_placed.rpt"/>
-  <File Type="PLACE-DCP" Name="imp_UART_loop_placed.dcp"/>
-  <File Type="PWROPT-TIMING" Name="imp_UART_loop_timing_summary_pwropted.rpt"/>
-  <File Type="PWROPT-DRC" Name="imp_UART_loop_drc_pwropted.rpt"/>
-  <File Type="PWROPT-DCP" Name="imp_UART_loop_pwropt.dcp"/>
-  <File Type="OPT-TIMING" Name="imp_UART_loop_timing_summary_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="imp_UART_loop.hwdef"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="imp_UART_loop_methodology_drc_opted.rpt"/>
-  <File Type="OPT-DRC" Name="imp_UART_loop_drc_opted.rpt"/>
-  <File Type="OPT-DCP" Name="imp_UART_loop_opt.dcp"/>
-  <File Type="INIT-TIMING" Name="imp_UART_loop_timing_summary_init.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="imp_UART_loop_bus_skew_routed.rpx"/>
-  <File Type="REPORTS-TCL" Name="imp_UART_loop_reports.tcl"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="imp_UART_loop_bus_skew_routed.pb"/>
-  <File Type="PA-TCL" Name="imp_UART_loop.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/src/Baud_rate/modules/Baud_rate_gen.sv">

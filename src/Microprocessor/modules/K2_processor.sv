@@ -11,7 +11,8 @@ module K2_processor #(
     DataMemEn,
     imm,
     MemData,
-    Ra
+    Ra,
+    Data_selector
 );
   // R_W(DataMemEn),
   //       .select(imm),
@@ -20,7 +21,7 @@ module K2_processor #(
   input logic [7:0] instruction_data;
   output logic [Bits-1:0] Ro;
   output logic [Bits-1:0] Ra;
-  output DataMemEn;
+  output DataMemEn, Data_selector;
   input logic [Bits-1:0] MemData;
   logic [Bits-1:0] Rb;
   logic [Bits-1:0] MuxOut, type_selected;

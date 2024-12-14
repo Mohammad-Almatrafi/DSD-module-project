@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1734096514">
-  <File Type="VDS-TIMING-PB" Name="imp_UART_loop_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="imp_UART_loop_timing_summary_synth.rpt"/>
+  <File Type="PA-TCL" Name="imp_UART_loop.tcl"/>
+  <File Type="REPORTS-TCL" Name="imp_UART_loop_reports.tcl"/>
+  <File Type="RDS-RDS" Name="imp_UART_loop.vds"/>
   <File Type="RDS-DCP" Name="imp_UART_loop.dcp"/>
   <File Type="RDS-UTIL-PB" Name="imp_UART_loop_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="imp_UART_loop_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="imp_UART_loop_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="imp_UART_loop.vds"/>
-  <File Type="REPORTS-TCL" Name="imp_UART_loop_reports.tcl"/>
-  <File Type="PA-TCL" Name="imp_UART_loop.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/src/Baud_rate/modules/Baud_rate_gen.sv">
